@@ -1,0 +1,10 @@
+.terraform/*
+servers/.terraform/*
+servers/terraform.tfstate.d/*
+servers/.terraform.lock.hcl
+servers/terraform.tfstate
+servers/terraform.tfstate.backup
+.terraform.lock.hcl
+terraform.tfstate.backup
+terraform.tfstate
+codes
