@@ -9,12 +9,14 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Ubuntu
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "cloud" {
   count         = 1
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
+  key_name      = "punk"
+  subnet_id     = "subnet-d4249dda"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "Cloud"
   }
 }
