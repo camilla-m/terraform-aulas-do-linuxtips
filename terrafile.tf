@@ -17,6 +17,6 @@ resource "aws_instance" "cloud" {
   subnet_id     = "subnet-d4249dda"
 
   tags = {
-    Name = "Cloud"
+    Name = "Cloud 2"
   }
 }
