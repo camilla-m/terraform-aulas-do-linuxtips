@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockercami
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      dockercami: web
+  template:
+    metadata:
+      labels:
+        dockercami: web
+    spec:
+      containers:
+      - name: dockercami
+        image: camillamartins/dockernode

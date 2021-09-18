@@ -1,0 +1,13 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1
+keyed_groups:
+  # add hosts to tag_Name_value groups for each aws_ec2 host's tags.Name variable
+  - key: tags.Name
+    prefix: tag_Name_
+    separator: ""
+groups:
+  # add hosts to the group development if any of the dictionary's keys or values is the word 'devel'
+  development: "'devel' in (tags|list)"
+compose:
+  ansible_host: public_ip_address

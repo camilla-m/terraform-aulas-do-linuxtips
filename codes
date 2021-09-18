@@ -1,0 +1,30 @@
+terraform plan -out bla
+terraform apply "bla"
+remover o state de nuvem
+terraform plan -destroy
+terraform state pull >> arquivo.tfstate ou push
+terraform plan -out plano -lock=false
+-refresh=false para infras grandes
+terraform refresh para atualizar o state
+-target=module.inquiry no apply e no plan pra pegar um módulo específico
+terraform state rm tira aquele estado da sua gerência automatica
+terraform state mv para mover estados
+terraform import aws_instance.web ami-ewer32432432432 importar coisas que criei na mão pro estado tfstate
+terraform taint (vai ser destruído e recriado)
+terraform workspace (criar staging e produção) - só o estado é diferente, o físico é o mesmo. por isso separar em regiões
+encrypt true
+terraform depends on (exemplo implícito com elastic ip e explicito com depends on)
+TF_LOG=TRACE antes dos comandos
+terraform taint através de terraform state list (untaint)
+terraform graph
+terraform fmt format -check -diff
+criar condicionais de criacao de maquinas com ternários condition ? true : false e com variáveis no variables.tf
+https://www.terraform.io/docs/language/values/variables.html
+https://learn.hashicorp.com/tutorials/terraform/for-each
+terraform ${var.name}
+groundwork - minimo pra aws funcionar https://github.com/gomex/terraform-module-groundwork
+make ## help
+mudar de versão fácil no cmd do terraform - https://tfswitch.warrensbox.com/Install/
+>>>>> TERRAFORM CLOUD
+
+importações simples e complexas

@@ -1,0 +1,7 @@
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=linuxtips123
+resources:
+  - mysql.yml
+  - wordpress.yml

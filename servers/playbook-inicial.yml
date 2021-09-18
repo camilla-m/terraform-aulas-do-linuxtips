@@ -1,0 +1,18 @@
+- hosts: all
+  become: yes
+  become_user: ubuntu
+
+  tasks:
+  - name: Checking the user name
+    shell: /usr/bin/whoami
+    register: username
+
+  - name: Debugging the whoami username
+    debug: msg={{ username.stdout }}
+
+  - name: Creates directory
+    file:
+      path: /home/ubuntu/linuxtips
+      state: directory
+      owner: ubuntu
+      group: ubuntu
