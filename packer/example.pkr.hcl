@@ -9,4 +9,9 @@ build {
     user              = "ubuntu"
     playbook_file     = "./playbook.yml"
   }
+  
+  post-processor "docker-tag" {
+    repository = "camillamartins/dockerpacker"
+    tags = ["1.0"]
+  }
 }
